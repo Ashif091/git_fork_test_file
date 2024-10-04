@@ -25,6 +25,10 @@ app.get('/get-data', (req, res) => {
   const phoneNumbers = generatePhoneNumbers(100);
   res.json(phoneNumbers);
 });
+app.post('/get-data', (req, res) => {
+  console.log(req.body);
+  res.json("ashif",req.body);
+})
 
 const PORT = 4000;
 app.listen(PORT, () => {
